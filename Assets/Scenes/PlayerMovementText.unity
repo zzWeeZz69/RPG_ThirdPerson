@@ -1007,6 +1007,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1016287085}
+  - {fileID: 2114895497}
   m_Father: {fileID: 1826431783}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1515,6 +1516,8 @@ MonoBehaviour:
   strafeRight: 100
   interact: 101
   Sprint: 304
+  fire: 323
+  aim: 324
   sensetivity: 180
 --- !u!143 &1826431780
 CharacterController:
@@ -1578,7 +1581,6 @@ Transform:
   m_Children:
   - {fileID: 968795310}
   - {fileID: 1503534631}
-  - {fileID: 2114895497}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1594,8 +1596,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88d335e3fd96ee429b2d807664b7f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 0}
-  GunHolster: {fileID: 0}
+  gun: {fileID: 5015553570010375959, guid: b2c52f0240b517d4d919cc67723682a1, type: 3}
+  GunHolster: {fileID: 2114895497}
 --- !u!1 &1845057181
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,11 +2095,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114895496}
   m_LocalRotation: {x: -0, y: 0.06780511, z: -0, w: 0.9976986}
-  m_LocalPosition: {x: 0.884, y: 0.18, z: 1.047}
+  m_LocalPosition: {x: 0.884, y: -0.39000002, z: 0.9670002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1826431783}
-  m_RootOrder: 2
+  m_Father: {fileID: 1503534631}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 7.7760005, z: 0}
 --- !u!1 &2138677391
 GameObject:
