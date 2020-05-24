@@ -9,7 +9,7 @@ namespace Zlib.Combat
 {
     public class GunHandler : MonoBehaviour
     {
-        [SerializeField] GameObject gun = null;
+        [SerializeField] Weapon CurrentWeapon = null;
         [SerializeField] Transform GunHolster = null;
         [SerializeField] Transform playerCamera = null;
         [SerializeField] LayerMask shootLayer = 0;
@@ -20,7 +20,7 @@ namespace Zlib.Combat
         {
             controls = GetComponent<Controls>();
             OnShoot += FireShootRay;
-            EqiupWeapon(gun);
+            EqiupWeapon(CurrentWeapon);
         }
 
     
@@ -43,10 +43,10 @@ namespace Zlib.Combat
             Debug.Log(hit.collider.gameObject.name);
         }
 
-        private void EqiupWeapon(GameObject gun)
+        private void EqiupWeapon(Weapon gun)
         {
-            Instantiate(gun, GunHolster);
-            gun.GetComponent<ShootHandler>().gunHandler = this;
+            GameObject spawnedGun = Instantiate(gun.gunPrefab, GunHolster);
+            spawnedGun.GetComponent<ShootHandler>().gunHandler = this;
         }
     }
 }
