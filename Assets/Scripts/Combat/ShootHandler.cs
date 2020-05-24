@@ -7,23 +7,25 @@ namespace Zlib.Combat
 {
     public class ShootHandler : MonoBehaviour
     {
-        [SerializeField] float fireRate;
-        [SerializeField] float damage;
-        [SerializeField] float reloadSpeed;
+        [SerializeField] Transform shootPoint = null;
+        [SerializeField] float fireRate = 0f;
+        [SerializeField] float damage = 10f;
+        [SerializeField] float reloadSpeed = 3f;
         [Space]
-        [SerializeField] float magSize;
-        [SerializeField] int amauntOfMags;
-        [SerializeField] float adsTime;
+        [SerializeField] float magSize = 12f;
+        [SerializeField] int amauntOfMags = 3;
+        [SerializeField] float adsTime = 0.5f;
 
         [HideInInspector] public GunHandler gunHandler;
         void Start()
         {
-            gunHandler.Shoot += Shoot;
+            gunHandler.OnShoot += Shoot;
         }
 
         void Shoot()
         {
-            Debug.Log("*Shoot*");
+            
+            
         }
     }
 }
